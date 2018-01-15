@@ -1,0 +1,49 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.9.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+group = 'com.cakes'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+jar {
+    baseName = 'cake'
+}
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-activemq')
+	  compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+
+	compile('org.springframework.boot:spring-boot-starter-artemis')
+	compile('org.springframework.boot:spring-boot-starter-cache')
+	compile('org.springframework.boot:spring-boot-starter-data-ldap')
+	compile('org.springframework.boot:spring-boot-starter-integration')
+	compile('org.springframework.boot:spring-boot-starter-mobile')
+	compile('org.springframework.boot:spring-boot-starter-security')
+	compile('org.springframework.session:spring-session')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-web-services')
+	compile('org.springframework.boot:spring-boot-starter-websocket')
+	runtime('org.springframework.boot:spring-boot-devtools')
+	runtime('mysql:mysql-connector-java')
+	compileOnly('org.springframework.boot:spring-boot-configuration-processor')
+	compileOnly('org.projectlombok:lombok')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile('org.springframework.security:spring-security-test')
+}
