@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class GreetingController {
+public class CakeController {
 
-    @RequestMapping("/main")
-    public String main(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+    @RequestMapping("/cake")
+    public String cake(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("name", name);
-        return "main";
-    }
+        return "cake";
+    };
 
 }

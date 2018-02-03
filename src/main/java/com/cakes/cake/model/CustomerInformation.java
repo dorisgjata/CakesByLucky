@@ -1,4 +1,4 @@
-package com.cakes.cake;
+package com.cakes.cake.model;
 
 import lombok.Data;
 @Data
