@@ -13,4 +13,10 @@ public class CakeController {
         return "cake";
     };
 
+    @RequestMapping("/contact")
+    public String contact(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        return "contact";
+    };
+
 }
