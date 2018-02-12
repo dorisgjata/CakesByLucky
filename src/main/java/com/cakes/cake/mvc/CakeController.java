@@ -18,5 +18,6 @@ public class CakeController {
         model.addAttribute("name", name);
         return "contact";
     };
+    
 
 }
