@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class CakeController {
 
     @RequestMapping("/cake")
-    public String cake(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
+    public String cake(@RequestParam(value="cake", required=false, defaultValue="World") String cake, Model model) {
+        model.addAttribute("cakes");
         return "cake";
     };
 
