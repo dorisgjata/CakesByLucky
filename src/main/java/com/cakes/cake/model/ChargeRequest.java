@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 @Data
 public class ChargeRequest{
-    public enum Currency {usd}  
+    public enum Currency {USD;}  
     @Getter @Setter
     private Currency currency; 
     @Getter @Setter
