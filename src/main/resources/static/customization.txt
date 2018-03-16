@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>Cakes By Lucky Customization Page</title>
+<script language="javascript" type="text/javascript">
+function test(Names){
+var Name
+for (var i=1;i<43;i++){
+ var tempname="mune_x"+i
+ var Item="x"+i
+  if (Names==tempname){
+   Nnews=document.getElementById(Item)
+   Nnews.style.display='';
+  }else{
+   Nnews=document.getElementById(Item)
+   Nnews.style.display='none';   
+  }
+ }
+}
+</script>
+</head>
+	<body>
+		
+<select size="1" name="D1" onChange="javascript:test('mune_x'+this.value)"> 
+<option value="1" selected="selected">Shapes</option> 
+<option value="2">Circular</option>	
+<option value="3">Square</option> 
+<option value="4">Rectangular</option> 
+<option value="5">Heart</option>	
+</select>
+<div id="x1" style="display:none;"></div>
+<div id="x2" style="display:none;"><img src="images/Circular1org.png"></div>
+<div id="x3" style="display:none"></div>
+<div id="x4" style="display:none;"></div>
+<div id="x5" style="display:none;"></div>	
+	
+<select size="1" name="D1" onChange="javascript:test('mune_x'+this.value)"> 
+<option value="6" selected="selected" >Layers</option> 
+<option value="7">1</option>	
+<option value="8">2</option> 
+<option value="9">3</option> 
+
+</select>
+<div id="x6" style="display:none;"></div>
+<div id="x7" style="display:none;"><img src="images/Circular1org.png"></div>
+<div id="x8" style="position:relative;display:none;"> 
+    <img src="images/Circular1org.png" style="position:absolute; left:0; top:0; z-index:1;" />
+    <img src="images/Circular2org.png" style="position:absolute; left:0; top:0; z-index:2;" />
+		</div>
+<div id="x9" style="position:relative;display:none;">  
+    <img src="images/Circular1org.png" style="position:absolute; left:0; top:0; z-index:1;" />
+    <img src="images/Circular2org.png" style="position:absolute; left:0; top:0; z-index:2;" />
+	<img src="images/Circular3org.png" style="position:absolute; left:0; top:0; z-index:3;" />
+		</div>
+		
+
+		
+<select size="1" name="D1" onChange="javascript:test('mune_x'+this.value)"> 
+<option value="10" selected="selected">Borders/Color</option> 
+<option value="11">Original</option>	
+<option value="12">Pink</option> 
+</select>
+<div id="x10" style="display:none;"></div>
+<div id="x11" style="display:none;"><img src="images/Circular1org.png"></div>
+<div id="x12" style="display:none;"><img src="images/pink1tiercake.png"></div>
+
+		
+<select size="1" name="D1" onChange="javascript:test('mune_x'+this.value)"> 
+<option value="13" selected="selected">Flavours</option> 
+<option value="14">Vanilla</option>	
+<option value="15">Chocolate</option> 
+<option value="16">Strawberry</option> 
+<option value="17">Marble</option>
+<option value="18">Coffee</option>
+<option value="19">Mocha</option>
+<option value="20">White Cake</option>
+<option value="21">Red Velvet</option>
+</select>
+<div id="x13" style="display:none;"></div>
+<div id="x14" style="display:none;"></div>
+<div id="x15" style="position:relative;display:none;"> 
+    <img src="images/Circular1org.png" style="position:absolute; left:0; top:0; z-index:1;" />
+   <img src="images/blackDrips-1tier.png" style="position:absolute; left:0; top:0; z-index:2;" />
+		</div>
+<div id="x16" style="display:none;"></div>
+<div id="x17" style="display:none;"></div>
+<div id="x18" style="display:none;"></div>
+<div id="x19" style="display:none;"></div>
+<div id="x20" style="display:none;"></div>
+<div id="x21" style="display:none;"></div>
+		
+<select size="1" name="D1" onChange="javascript:test('mune_x'+this.value)"> 
+<option value="22" selected="selected">Icing</option> 
+<option value="23">No Icing</option>	
+<option value="24">Butter Cream</option> 
+<option value="25">Whipped</option> 
+</select>
+<div id="x22" style="display:none;"></div>
+<div id="x23" style="display:none;"></div>
+<div id="x24" style="display:none"></div>
+<div id="x25" style="display:none;"></div>
+
+<select size="1" name="D1" onChange="javascript:test('mune_x'+this.value)"> 
+<option value="26" selected="selected">Fillings</option> 
+<option value="27">Whipped Cream</option>	
+<option value="28">Fruits with Whipped Cream</option> 
+<option value="29">Fruit Jams</option> 
+<option value="30">American Butter Cream</option>
+<option value="31">Banana Cream</option>
+<option value="32">Cream Cheese Froasting</option>
+<option value="33">Chocolate mousse</option>
+<option value="34">White Chocolate Mousse</option>
+<option value="35">Strawberry Mousse</option>
+<option value="36">Mocha</option>
+<option value="37">Cream Cheese</option>
+</select>
+<div id="x26" style="display:none;"></div>
+<div id="x27" style="display:none;"></div>
+<div id="x28" style="display:none"></div>
+<div id="x29" style="display:none;"></div>
+<div id="x30" style="display:none;"></div>
+<div id="x31" style="display:none;"></div>
+<div id="x32" style="display:none;"></div>
+<div id="x33" style="display:none;"></div>
+<div id="x34" style="display:none;"></div>
+<div id="x35" style="display:none;"></div>
+<div id="x36" style="display:none;"></div>
+		
+</body>		
+</html>
