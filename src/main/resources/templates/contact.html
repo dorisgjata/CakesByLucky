@@ -7,49 +7,53 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
 </head>
 <body>
-  <nav class="navbar is-primary is-info" role="navigation" aria-label="main navigation">
-    <div class="navbar-start">
-      <a class="navbar-item" href="/main">
-        CakesByLucky
-      </a>
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Menu
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">Cakes</a>
-        </div>
+ 
+  <section class="hero is-medium is-info">
+    <div class="hero-foot">
+    <div class="container">
+      <nav class="tabs is-boxed">
+        <ul>
+           <li>
+            <a href="/cake">Gallery</a>
+          </li>
+          <li>
+            <a href="/cake">Cake</a>
+          </li>
+          <li>
+            <a href="/checkout">Checkout</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+         </ul>
+      </nav>
       </div>
     </div>
-  </nav>
+  </section>
   <section class="section">
     <div class="container">
       <h1 class="title">About you.</h1>
       <h2 class="subtitle">
         Before we start baking we need some info about you.
       </h2>
-      <form>
-        <div class="field">
-          <label class="label">Name</label>
-          <div class="control">
-            <input class="input" type="text" placeholder="e.g Alex Smith">
-          </div>
-        </div>        
+      <form th:action=@{/contact} th:object="${email}" method="post">
         <div class="field">
           <label class="label">Email</label>
           <div class="control">
-            <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+            <input class="input" type="email" th:field="*{from}" th:placeholder="Email">
+
+          </div>
+        </div>     
+        <div class="field">
+          <label class="label">Subject</label>
+          <div class="control">
+            <input class="input" type="subject" th:field="*{subject}" th:placeholder="Subject">
           </div>
         </div>
-        
-        <div class="field">
+         <div class="field">
           <label class="label">Message</label>
           <div class="control">
-            <textarea class="textarea" placeholder="Textarea"></textarea>
+            <input class="input" type="text" th:field="*{text}" th:placeholder="Text">
           </div>
         </div>
         <div class="field is-grouped">
