@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Main Page</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
+</head>
+<body>
+ 
+  <section class="hero is-medium is-info">
+    <div class="hero-foot">
+    <div class="container">
+      <nav class="tabs is-boxed">
+        <ul>
+           <li>
+            <a href="/cake">Gallery</a>
+          </li>
+          <li>
+            <a href="/cake">Cake</a>
+          </li>
+          <li>
+            <a href="/checkout">Checkout</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+         </ul>
+      </nav>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">About you.</h1>
+      <h2 class="subtitle">
+        Before we start baking we need some info about you.
+      </h2>
+      <form th:action=@{/contact} th:object="${email}" method="post">
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input class="input" type="email" th:field="*{from}" th:placeholder="Email">
+
+          </div>
+        </div>     
+        <div class="field">
+          <label class="label">Subject</label>
+          <div class="control">
+            <input class="input" type="subject" name="subject" th:field="*{subject}" th:placeholder="Subject">
+          </div>
+        </div>
+         <div class="field">
+          <label class="label">Message</label>
+          <div class="control">
+            <input class="input" type="text" th:field="*{text}" th:placeholder="Text">
+          </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="/main">Home</a></li>
+      <li><a href="/cake">Cakes</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
+
