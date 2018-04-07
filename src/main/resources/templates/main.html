@@ -5,7 +5,19 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 </head>
+<style>
+  #tab-content p {
+  display: none;
+}
+
+#tab-content p.is-active {
+  display: block;
+}
+
+</style>
 <body>
  
   <section class="hero is-medium is-info">
@@ -18,7 +30,7 @@
     </div>
     <div class="hero-foot">
     <div class="container">
-      <nav class="tabs is-boxed">
+      <nav class="tabs is-centered is-boxed">
         <ul>
            <li>
             <a href="/main">Gallery</a>
@@ -37,46 +49,76 @@
       </div>
     </div>
   </section>
-  <nav class="navbar has-shadow">
-  <div class="container">
-    <div id="nav-tab" class="navbar-tabs">
-      <a href="#babyShower" class="navbar-item is-tab is-active" >
-        Baby Shower
+<div class="tabs is-centered has-shadow" id="tabs">
+  <ul>
+    <li class="is-active" data-tab="1">
+      <a>
+        <span>Baby Shower</span>
       </a>
-      <a href="#birthday" class="navbar-item is-tab">
-        Birthday
+    </li>
+    <li data-tab="2">
+      <a>
+        <span>Birthday</span>
       </a>
-      <a href="#bridalShower" class="navbar-item is-tab">
-        Bridal Shower
+    </li>
+    <li data-tab="3">
+      <a>
+        <span>Bridal Shower</span>
       </a>
-      <a href="#engagement" class="navbar-item is-tab">
-        Engagement
+    </li>
+    <li data-tab="4">
+      <a>
+        <span>Engagement</span>
       </a>
-      <a href="#graduation" class="navbar-item is-tab">
-        Graduation
+    </li>
+    <li data-tab="5">
+      <a>
+        <span>Graduation</span>
       </a>
-      <a href="#mehndi" class="navbar-item is-tab">
-        Mehndi
+    </li>
+    <li data-tab="6">
+      <a>
+        <span>Mehndi</span>
       </a>
-      <a href="#specialEvents" class="navbar-item is-tab">
-        Special Events
+    </li>
+    <li data-tab="7">
+      <a>
+        <span>Special Events</span>
       </a>
-       <a href="#weddingCakes" class="navbar-item is-tab">
-        Wedding Cakes
+    </li>
+    <li data-tab="8">
+      <a>
+        <span>Wedding Cakes</span>
       </a>
-    </div>
-  </div>
-</nav>
-  <section class="section">
-    <div class="container">
-  <div  class="gallery">
-    <div class="tab-content">
-      <div class="tab-pane active" id="babyShower"> Baby Shower</div>
-      <div class="tab-pane" id="birthday"> Birthday</div>
-  </div>
-
-    </div>
-    </div>
+    </li>
+  </ul>
+</div>
+<section class="section">
+<div id="tab-content">
+  <p class="is-active" data-content="1">
+    Baby
+  </p>
+  <p data-content="2">
+    Birthday
+  </p>
+  <p data-content="3">
+    bridal
+  </p>
+  <p data-content="4">
+    engagement
+  </p>
+   <p data-content="5">
+    graduation
+  </p>
+   <p data-content="6">
+    Mehndi
+  </p>
+  <p data-content="7">
+    special events
+  </p>
+  <p data-content="8">
+    wedding
+  </p>
   </section>
   <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
     <ul>
@@ -87,20 +129,16 @@
   </nav>
 </body>
 <script type="text/javascript">
-  (function(){
-          function onTabClick(event){
-            var actives = document.querySelectorAll('.is-active');
- 
-            for (var i=0; i < actives.length; i++){
-              actives[i].className = actives[i].className.replace('is-active', '');
-            }
- 
-            event.target.parentElement.className += ' is-active';
-            document.getElementById(event.target.href.split('#')[1]).className += ' is-active';
-          }
- 
-          var el = document.getElementById('nav-tab');
- 
-          el.addEventListener('click', onTabClick, false);
-        })();</script>
+  $(document).ready(function() {
+  $('#tabs li').on('click', function() {
+    var tab = $(this).data('tab');
+
+    $('#tabs li').removeClass('is-active');
+    $(this).addClass('is-active');
+
+    $('#tab-content p').removeClass('is-active');
+    $('p[data-content="' + tab + '"]').addClass('is-active');
+  });
+});
+</script>
 </html>
