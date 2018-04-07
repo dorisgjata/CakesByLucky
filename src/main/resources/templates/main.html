@@ -6,15 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox-plus-jquery.min.js"></script>
 </head>
 <style>
-  #tab-content p {
+  #tab-content div {
   display: none;
 }
 
-#tab-content p.is-active {
+#tab-content div.is-active {
   display: block;
+}
+.gallery{
+    margin: 10px 50px;
+}
+.gallery img{
+    width: 230px;
+    padding: 5px;
+    
+    
+}
+.gallery img:hover{
+    transform: scale(1.1);
 }
 
 </style>
@@ -95,9 +108,26 @@
 </div>
 <section class="section">
 <div id="tab-content">
-  <p class="is-active" data-content="1">
-    Baby
-  </p>
+  <div class="gallery is-active" data-content="1">
+    <a href="/images/baby1.jpg" data-lightbox="mygallery"><img src="/images/baby1.jpg" height="300"></a>
+    <a href="/images/baby2.jpg" data-lightbox="mygallery"><img src="/images/baby2.jpg" height="300"></a>
+    <a href="/images/baby3.jpg" data-lightbox="mygallery"><img src="/images/baby3.jpg" height="300"></a>
+    <a href="/images/baby4.jpg" data-lightbox="mygallery"><img src="/images/baby4.jpg" height="300"></a>
+    <a href="/images/baby6.jpg" data-lightbox="mygallery"><img src="/images/baby6.jpg" height="300"></a>
+    <a href="/images/baby7.jpg" data-lightbox="mygallery"><img src="/images/baby7.jpg" height="300"></a>
+    <a href="/images/baby8.jpg" data-lightbox="mygallery"><img src="/images/baby8.jpg" height="300"></a>
+    <a href="/images/baby9.jpg" data-lightbox="mygallery"><img src="/images/baby9.jpg" height="300"></a>
+    <a href="/images/baby10.jpg" data-lightbox="mygallery"><img src="/images/baby10.jpg" height="300"></a>
+    <a href="/images/baby11.jpg" data-lightbox="mygallery"><img src="/images/baby11.jpg" height="300"></a>
+    <a href="/images/baby13.jpg" data-lightbox="mygallery"><img src="/images/baby13.jpg" height="300"></a>
+    <a href="/images/baby14.jpg" data-lightbox="mygallery"><img src="/images/baby14.jpg" height="300"></a>
+    <a href="/images/baby15.jpg" data-lightbox="mygallery"><img src="/images/baby15.jpg" height="300"></a>
+    <a href="/images/baby16.jpg" data-lightbox="mygallery"><img src="/images/baby16.jpg" height="300"></a>
+    <a href="/images/baby17.jpg" data-lightbox="mygallery"><img src="/images/baby17.jpg" height="300"></a>
+    <a href="/images/baby5.jpg" data-lightbox="mygallery"><img src="/images/baby5.jpg" height="300"></a>
+    <a href="/images/baby12.jpg" data-lightbox="mygallery"><img src="/images/baby12.jpg" height="300"></a>    
+    </div>
+ 
   <p data-content="2">
     Birthday
   </p>
@@ -136,8 +166,8 @@
     $('#tabs li').removeClass('is-active');
     $(this).addClass('is-active');
 
-    $('#tab-content p').removeClass('is-active');
-    $('p[data-content="' + tab + '"]').addClass('is-active');
+    $('#tab-content div').removeClass('is-active');
+    $('div[data-content="' + tab + '"]').addClass('is-active');
   });
 });
 </script>
