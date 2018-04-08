@@ -3,16 +3,38 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-
-    <head>
-        <title>Cart</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-    </head>
-
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox-plus-jquery.min.js"></script>
+</head>
     <body>
-        <table border="1px" align="center">
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+        <section class="hero is-medium is-info">
+    <div class="hero-foot">
+    <div class="container">
+      <nav class="tabs is-boxed">
+        <ul>
+           <li>
+            <a href="/main">Gallery</a>
+          </li>
+          <li>
+            <a href="/cake">Cake</a>
+          </li>
+          <li>
+            <a href="/desserts">Buy Desserts</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+         </ul>
+      </nav>
+      </div>
+    </div>
+  </section>
+        <table class="table is-striped" align="center">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <th></th>
                 <th>Name</th>
                 <th>Price</th>
@@ -26,11 +48,11 @@
                     <td>
                         <input type="hidden" name="name" value="Cake Pops">
                         <input type="hidden" name="price" value="24">
-                        <input type="submit" value="Add to cart" align="center">
+                        <input type="submit" value="Add to cart" class="button is-info" align="center">
                     </td>
                 </tr>
             </form>
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <tr>
                     <td><img th:src="@{/images/img2.jpg}" src="../images/img2.jpg" class="img-responsive" alt="Responsive image" height="200" width="200" />
                     </td>
@@ -39,11 +61,11 @@
                     <td>
                         <input type="hidden" name="name" value="Buttercream Cupcakes">
                         <input type="hidden" name="price" value="18">
-                        <input type="submit" value="Add to cart">
+                        <input type="submit" value="Add to cart" class="button is-info">
                     </td>
                 </tr>
             </form>
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <tr>
                     <td>
                         <img th:src="@{/images/img8.jpg}" src="../images/img8.jpg" class="img-responsive" alt="Responsive image" height="200" width="200" />
@@ -53,11 +75,11 @@
                     <td>
                         <input type="hidden" name="name" value="Fondant Cupcakes">
                         <input type="hidden" name="price" value="24">
-                        <input type="submit" value="Add to cart">
+                        <input type="submit" value="Add to cart" class="button is-info">
                     </td>
                 </tr>
             </form>
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <tr>
                     <td>
                         <img th:src="@{/images/img11.jpg}" src="../images/img11.jpg" class="img-responsive" alt="Responsive image" height="200" width="200" />
@@ -67,11 +89,11 @@
                     <td>
                         <input type="hidden" name="name" value="Mini Cupcakes">
                         <input type="hidden" name="price" value="12">
-                        <input type="submit" value="Add to cart">
+                        <input type="submit" value="Add to cart" class="button is-info">
                     </td>
                 </tr>
             </form>
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <tr>
                     <td><img th:src="@{/images/img3.jpg}" src="../images/img3.jpg" class="img-responsive" alt="Responsive image" height="200" width="200" />
                     </td>
@@ -80,12 +102,12 @@
                     <td>
                         <input type="hidden" name="name" value="Sugar Cookies">
                         <input type="hidden" name="price" value="20">
-                        <input type="submit" value="Add to cart">
+                        <input type="submit" value="Add to cart" class="button is-info">
                     </td>
                 </tr>
 
             </form>
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <tr>
                     <td><img th:src="@{/images/img65.jpg}" src="../images/img65.jpg" class="img-responsive" alt="Responsive image" height="200" width="200" />
                     </td>
@@ -94,11 +116,11 @@
                     <td>
                         <input type="hidden" name="name" value="Chocolate Covered Strawberries">
                         <input type="hidden" name="price" value="18">
-                        <input type="submit" value="Add to cart">
+                        <input type="submit" value="Add to cart" class="button is-info">
                     </td>
                 </tr>
             </form>
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <tr>
                     <td><img th:src="@{/images/img41.jpg}" src="../images/img41.jpg" class="img-responsive" alt="Responsive image" height="200" width="200" />
                     </td>
@@ -107,12 +129,12 @@
                     <td>
                         <input type="hidden" name="name" value="Chocolate Covered Pretzels">
                         <input type="hidden" name="price" value="12">
-                        <input type="submit" value="Add to cart">
+                        <input type="submit" value="Add to cart" class="button is-info">
                     </td>
                 </tr>
 
             </form>
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <tr>
                     <td><img th:src="@{/images/img53.jpg}" src="../images/img53.jpg" class="img-responsive" alt="Responsive image" height="200" width="200" />
                     </td>
@@ -121,11 +143,11 @@
                     <td>
                         <input type="hidden" name="name" value="Cheesecake">
                         <input type="hidden" name="price" value="35">
-                        <input type="submit" value="Add to cart">
+                        <input type="submit" value="Add to cart" class="button is-info">
                     </td>
                 </tr>
             </form>
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <tr>
                     <td><img th:src="@{/images/img26.jpg}" src="../images/img26.jpg" class="img-responsive" alt="Responsive image" height="200" width="200" />
                     </td>
@@ -134,12 +156,12 @@
                     <td>
                         <input type="hidden" name="name" value="Bitesize Cheesecake">
                         <input type="hidden" name="price" value="12">
-                        <input type="submit" value="Add to cart">
+                        <input type="submit" value="Add to cart" class="button is-info">
                     </td>
                 </tr>
 
             </form>
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <tr>
                     <td><img th:src="@{/images/img59.jpg}" src="../images/img59.jpg" class="img-responsive" alt="Responsive image" height="200" width="200" />
                     </td>
@@ -148,11 +170,11 @@
                     <td>
                         <input type="hidden" name="name" value="Bitesize Cakes">
                         <input type="hidden" name="price" value="12">
-                        <input type="submit" value="Add to cart">
+                        <input type="submit" value="Add to cart" class="button is-info">
                     </td>
                 </tr>
             </form>
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <tr>
                     <td><img th:src="@{/images/img2.jpg}" src="../images/img15.jpg" class="img-responsive" alt="Responsive image" height="200" width="200" />
                     </td>
@@ -161,12 +183,12 @@
                     <td>
                         <input type="hidden" name="name" value="Lemon Bars">
                         <input type="hidden" name="price" value="18">
-                        <input type="submit" value="Add to cart">
+                        <input type="submit" value="Add to cart" class="button is-info">
                     </td>
                 </tr>
 
             </form>
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <tr>
                     <td><img th:src="@{/images/img43.jpg}" src="../images/img43.jpg" class="img-responsive" alt="Responsive image" height="200" width="200" />
                     </td>
@@ -175,11 +197,11 @@
                     <td>
                         <input type="hidden" name="name" value="Chocolate Covered Marshmallows">
                         <input type="hidden" name="price" value="12">
-                        <input type="submit" value="Add to cart">
+                        <input type="submit" value="Add to cart" class="button is-info">
                     </td>
                 </tr>
             </form>
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <tr>
                     <td><img th:src="@{/images/img2.jpg}" src="../images/img15.jpg" class="img-responsive" alt="Responsive image" height="200" width="200" />
                     </td>
@@ -188,12 +210,12 @@
                     <td>
                         <input type="hidden" name="name" value="Chocolate Covered Oreos">
                         <input type="hidden" name="price" value="12">
-                        <input type="submit" value="Add to cart">
+                        <input type="submit" value="Add to cart" class="button is-info">
                     </td>
                 </tr>
 
             </form>
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <tr>
                     <td><img th:src="@{/images/img45.jpg}" src="../images/img45.jpg" class="img-responsive" alt="Responsive image" height="200" width="200" />
                     </td>
@@ -202,11 +224,11 @@
                     <td>
                         <input type="hidden" name="name" value="French Macarons">
                         <input type="hidden" name="price" value="20">
-                        <input type="submit" value="Add to cart">
+                        <input type="submit" value="Add to cart" class="button is-info">
                     </td>
 
             </form>
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <tr>
                     <td><img th:src="@{/images/img2.jpg}" src="../images/img15.jpg" class="img-responsive" alt="Responsive image" height="200" width="200" />
                     </td>
@@ -215,12 +237,12 @@
                     <td>
                         <input type="hidden" name="name" value="Rice Crispy Treats">
                         <input type="hidden" name="price" value="12">
-                        <input type="submit" value="Add to cart">
+                        <input type="submit" value="Add to cart" class="button is-info">
                     </td>
                 </tr>
 
             </form>
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <tr>
                     <td><img th:src="@{/images/img2.jpg}" src="../images/img15.jpg" class="img-responsive" alt="Responsive image" height="200" width="200" />
                     </td>
@@ -229,11 +251,11 @@
                     <td>
                         <input type="hidden" name="name" value="Tiramisu">
                         <input type="hidden" name="price" value="12">
-                        <input type="submit" value="Add to cart">
+                        <input type="submit" value="Add to cart" class="button is-info">
                     </td>
                 </tr>
             </form>
-            <form action="#" th:action="@{/index}" th:object="${Addtocart}" method="post">
+            <form action="#" th:action="@{/desserts}" th:object="${Addtocart}" method="post">
                 <tr>
                     <td><img th:src="@{/images/img12.jpg}" src="../images/img12.jpg" class="img-responsive" alt="Responsive image" height="200" width="200" />
                     </td>
@@ -242,7 +264,7 @@
                     <td>
                         <input type="hidden" name="name" value="Trifle Cups">
                         <input type="hidden" name="price" value="3">
-                        <input type="submit" value="Add to cart">
+                        <input type="submit" value="Add to cart" class="button is-info">
                     </td>
                 </tr>
 

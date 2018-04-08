@@ -30,7 +30,7 @@ public class UserRegistrationService {
 
 		SimpleMailMessage[] mailMessageArray = new SimpleMailMessage[userEmailIds.size()];
 		Iterator iterator = userEmailIds.iterator();
-		for (int index = 0; iterator.hasNext(); index ++){
+		for (int desserts = 0; iterator.hasNext(); desserts ++){
 
 			SimpleMailMessage message = new SimpleMailMessage();
 
@@ -38,7 +38,7 @@ public class UserRegistrationService {
 			message.setTo(toAddress);
 			message.setSubject("User Registration successful");
 			message.setText("The user '" + toAddress + "' is successfully registered");
-			mailMessageArray[index] = message;
+			mailMessageArray[desserts] = message;
 		}
 		System.out.println("Sending email ....");
 		mailSender.send(mailMessageArray);

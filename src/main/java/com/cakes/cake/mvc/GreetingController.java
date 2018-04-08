@@ -12,9 +12,9 @@ public class GreetingController {
         model.addAttribute("name", name);
         return "main";
     }
-     @RequestMapping("/index")
+     @RequestMapping("/desserts")
     public String indedx() {
-        return "index";
+        return "desserts";
     }
 
 }

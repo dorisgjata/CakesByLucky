@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class descontroller{
-@RequestMapping(value="/index", method=RequestMethod.POST)
+@RequestMapping(value="/desserts", method=RequestMethod.POST)
 
 public void doPost(HttpServletRequest request, HttpServletResponse response)
 throws Exception {
