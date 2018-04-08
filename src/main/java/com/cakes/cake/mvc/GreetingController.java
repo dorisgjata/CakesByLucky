@@ -12,5 +12,9 @@ public class GreetingController {
         model.addAttribute("name", name);
         return "main";
     }
+     @RequestMapping("/index")
+    public String indedx() {
+        return "index";
+    }
 
 }

@@ -1,12 +1,8 @@
 
-package com.example.des.controller;
+package com.cakes.cake.model;
 
 import java.util.HashMap;
 
-/**
-*
-* @author rajat
-*/
 public class Cart {
 HashMap<String, Integer> cartItems;
 
