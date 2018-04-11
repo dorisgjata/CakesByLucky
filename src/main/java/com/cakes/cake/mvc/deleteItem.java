@@ -34,6 +34,7 @@ throws Exception {
                 out.println("<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>");
                 out.println("<link rel='stylesheet' type='text/css; href='https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css'>");
                 out.println("<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox-plus-jquery.min.js'></script>");
+                out.println("<script src='https://checkout.stripe.com/checkout.js'></script>");
                 out.println("<title>result</title>"); 
                 out.println("</head>");
                 out.println("<body>");
@@ -63,11 +64,21 @@ throws Exception {
         }
         out.println("<table border='1px'align='center'>");
         out.println("<p align='center'>Total cost = "+"$"+total+"</p>");        
-        out.println("<table align='center'><tr><td><input type='submit' class='button is-info' align='center' value='Checkout'></td></tr></table>");
-
-
+        out.println("<table align='center'><tr><td><input type='submit'id='customButton' class='button is-info' align='center' value='Checkout'></td></tr></table>");
+        out.println("<script>");
+        out.println("var handler = StripeCheckout.configure({key: 'pk_test_XiN2djuA00o46n9VUKYMcOo4'});");
+        out.println("document.getElementById('customButton').addEventListener('click',function(e){");
+        out.println("handler.open({name: 'Cakes by Lucky',amount:"+total*100+"});");
+        out.println("e.preventDefault();});");
+        out.println("window.addEventListener('popstate', function(){");
+        out.println("handler.close();");
+        out.println("});");
+        out.println("</script>");
+        out.println("</body>");
+        out.println("</html>");
         out.println("</body>");
         out.println("</html>");
         }
+
         }
         }
