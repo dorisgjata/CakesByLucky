@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Main Page</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox-plus-jquery.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+</head>
+<style>
+  #tab-content div {
+  display: none;
+}
+
+#tab-content div.is-active {
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+}
+.gallery img{
+    width: 230px;
+    height: 230px;
+    padding: 5px;
+    
+    
+}
+.gallery img:hover{
+    transform: scale(1.1);
+}
+
+.hero-body {
+  background-image: url(https://images.pexels.com/photos/230743/pexels-photo-230743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-foot {
+ background-image: url(https://images.pexels.com/photos/230743/pexels-photo-230743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  height: 5%;
+  background-position: 50% 29% ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.title{
+font-family: 'Sofia';font-size: 42px;
+ letter-spacing: 5.5px;
+ text-align: center;
+  font-weight: bold;
+   margin-right: 100px;
+}
+
+.container1{
+  margin-left: 440px;
+   font-weight: bold;
+}
+
+</style>
+<body>
+  <section class="hero is-medium is-info">
+ 
+    <div class="hero-foot">
+    <div class="container1">
+      <nav class="tabs is-boxed">
+        <ul>
+           <li>
+            <a href="/main">Gallery</a>
+          </li>
+          <li>
+            <a href="/cake">Cake</a>
+          </li>
+          <li>
+            <a href="/desserts">Buy Desserts</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+         </ul>
+      </nav>
+      </div>
+    </div>
+  </section>
+  <section class="hero is-medium is-info">
+    <div class="hero-body">
+      <div class="container2">
+        <h1 class="title"> 
+        CakesByLucky
+        </h1>  
+      </div>
+    </div>
+  </section>
+<div class="tabs is-centered has-shadow" id="tabs">
+  <ul>
+    <li class="is-active" data-tab="1">
+      <a>
+        <span>Baby Shower</span>
+      </a>
+    </li>
+    <li data-tab="2">
+      <a>
+        <span>Birthday</span>
+      </a>
+    </li>
+    <li data-tab="3">
+      <a>
+        <span>Bridal Shower</span>
+      </a>
+    </li>
+    <li data-tab="4">
+      <a>
+        <span>Engagement</span>
+      </a>
+    </li>
+    <li data-tab="5">
+      <a>
+        <span>Graduation</span>
+      </a>
+    </li>
+    <li data-tab="6">
+      <a>
+        <span>Mehndi</span>
+      </a>
+    </li>
+    <li data-tab="7">
+      <a>
+        <span>Special Events</span>
+      </a>
+    </li>
+    <li data-tab="8">
+      <a>
+        <span>Wedding Cakes</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<section class="container3" align="center">
+<div id="tab-content">
+  <div class="gallery is-active" data-content="1">
+    <a href="/images/baby1.jpg" data-lightbox="mygallery"><img src="/images/baby1.jpg" height="300"></a>
+    <a href="/images/baby2.jpg" data-lightbox="mygallery"><img src="/images/baby2.jpg" height="300"></a>
+    <a href="/images/baby3.jpg" data-lightbox="mygallery"><img src="/images/baby3.jpg" height="300"></a>
+    <a href="/images/baby4.jpg" data-lightbox="mygallery"><img src="/images/baby4.jpg" height="300"></a>
+    <a href="/images/baby6.jpg" data-lightbox="mygallery"><img src="/images/baby6.jpg" height="300"></a>
+    <a href="/images/baby7.jpg" data-lightbox="mygallery"><img src="/images/baby7.jpg" height="300"></a>
+    <a href="/images/baby8.jpg" data-lightbox="mygallery"><img src="/images/baby8.jpg" height="300"></a>
+    <a href="/images/baby9.jpg" data-lightbox="mygallery"><img src="/images/baby9.jpg" height="300"></a>
+    <a href="/images/baby10.jpg" data-lightbox="mygallery"><img src="/images/baby10.jpg" height="300"></a>
+    <a href="/images/baby11.jpg" data-lightbox="mygallery"><img src="/images/baby11.jpg" height="300"></a>
+    <a href="/images/baby13.jpg" data-lightbox="mygallery"><img src="/images/baby13.jpg" height="300"></a>
+    <a href="/images/baby14.jpg" data-lightbox="mygallery"><img src="/images/baby14.jpg" height="300"></a>
+    <a href="/images/baby15.jpg" data-lightbox="mygallery"><img src="/images/baby15.jpg" height="300"></a>
+    <a href="/images/baby16.jpg" data-lightbox="mygallery"><img src="/images/baby16.jpg" height="300"></a>
+    <a href="/images/baby17.jpg" data-lightbox="mygallery"><img src="/images/baby17.jpg" height="300"></a>
+    <a href="/images/baby5.jpg" data-lightbox="mygallery"><img src="/images/baby5.jpg" height="300"></a>
+    <a href="/images/baby12.jpg" data-lightbox="mygallery"><img src="/images/baby12.jpg" height="300"></a>    
+    </div>
+ 
+    <div class="gallery"  data-content="2">
+      <a href="/images/birthday1.jpg" data-lightbox="mygallery"><img src="/images/birthday1.jpg" height="280"></a>
+      <a href="/images/birthday2.jpg" data-lightbox="mygallery"><img src="/images/birthday2.jpg" height="280"></a>
+      <a href="/images/birthday8.jpg" data-lightbox="mygallery"><img src="/images/birthday8.jpg" height="280"></a>
+      <a href="/images/birthday5.jpg" data-lightbox="mygallery"><img src="/images/birthday5.jpg" height="280"></a>
+      <a href="/images/birthday12.jpg" data-lightbox="mygallery"><img src="/images/birthday12.jpg" height="280"></a>
+      <a href="/images/birthday21.jpg" data-lightbox="mygallery"><img src="/images/birthday21.jpg" height="280"></a>
+      <a href="/images/birthday7.jpg" data-lightbox="mygallery"><img src="/images/birthday7.jpg" height="280"></a>
+      <a href="/images/birthday10.jpg" data-lightbox="mygallery"><img src="/images/birthday10.jpg" height="280"></a>
+      <a href="/images/birthday9.jpg" data-lightbox="mygallery"><img src="/images/birthday9.jpg" height="280"></a>
+      <a href="/images/birthday14.jpg" data-lightbox="mygallery"><img src="/images/birthday14.jpg" height="280"></a>
+      <a href="/images/birthday11.jpg" data-lightbox="mygallery"><img src="/images/birthday11.jpg" height="280"></a>
+      <a href="/images/birthday16.jpg" data-lightbox="mygallery"><img src="/images/birthday16.jpg" height="280"></a>
+      <a href="/images/birthday6.jpg" data-lightbox="mygallery"><img src="/images/birthday6.jpg" height="280"></a>
+      <a href="/images/birthday17.jpg" data-lightbox="mygallery"><img src="/images/birthday17.jpg" height="280"></a>
+      <a href="/images/birthday18.jpg" data-lightbox="mygallery"><img src="/images/birthday18.jpg" height="280"></a>     
+      <a href="/images/birthday4.jpg" data-lightbox="mygallery"><img src="/images/birthday4.jpg" height="280"></a>
+      <a href="/images/birthday19.jpg" data-lightbox="mygallery"><img src="/images/birthday19.jpg" height="280"></a>
+      <a href="/images/birthday3.jpg" data-lightbox="mygallery"><img src="/images/birthday3.jpg" height="280"></a>
+      <a href="/images/birthday15.jpg" data-lightbox="mygallery"><img src="/images/birthday15.jpg" height="280"></a>
+      <a href="/images/birthday13.jpg" data-lightbox="mygallery"><img src="/images/birthday13.jpg" height="280"></a>
+      <a href="/images/birthday20.jpg" data-lightbox="mygallery"><img src="/images/birthday20.jpg" height="280"></a>
+      <a href="/images/birthday22.jpg" data-lightbox="mygallery"><img src="/images/birthday22.jpg" height="280"></a>
+      <a href="/images/birthday23.jpg" data-lightbox="mygallery"><img src="/images/birthday23.jpg" height="280"></a>
+      <a href="/images/birthday24.jpg" data-lightbox="mygallery"><img src="/images/birthday24.jpg" height="280"></a>
+      <a href="/images/birthday25.jpg" data-lightbox="mygallery"><img src="/images/birthday25.jpg" height="280"></a>
+      <a href="/images/birthday26.jpg" data-lightbox="mygallery"><img src="/images/birthday26.jpg" height="280"></a> 
+      <a href="/images/birthday27.jpg" data-lightbox="mygallery"><img src="/images/birthday27.jpg" height="280"></a> 
+      <a href="/images/birthday28.jpg" data-lightbox="mygallery"><img src="/images/birthday28.jpg" height="280"></a> 
+      <a href="/images/birthday29.jpg" data-lightbox="mygallery"><img src="/images/birthday29.jpg" height="280"></a>
+    </div>
+
+  <div class="gallery" data-content="3">
+   <a href="/images/bridal1.jpg" data-lightbox="mygallery"><img src="/images/bridal1.jpg" height="350"></a>
+    <a href="/images/bridal2.jpg" data-lightbox="mygallery"><img src="/images/bridal2.jpg" height="350"></a>
+    <a href="/images/bridal3.jpg" data-lightbox="mygallery"><img src="/images/bridal3.jpg" height="350"></a>
+    <a href="/images/bridal5.jpg" data-lightbox="mygallery"><img src="/images/bridal5.jpg" height="350"></a>
+    <a href="/images/bridal6.jpg" data-lightbox="mygallery"><img src="/images/bridal6.jpg" height="350"></a>
+    <a href="/images/bridal4.jpg" data-lightbox="mygallery"><img src="/images/bridal4.jpg" height="350"></a>    
+  </div>
+  <div class="gallery" data-content="4">
+    <a href="images/eng7.jpg" data-lightbox="mygallery"><img src="images/eng7.jpg" height="250"></a>
+    <a href="images/eng1.jpg" data-lightbox="mygallery"><img src="images/eng1.jpg" height="250"></a>
+    <a href="images/eng3.jpg" data-lightbox="mygallery"><img src="images/eng3.jpg" height="250"></a>
+    <a href="images/eng4.jpg" data-lightbox="mygallery"><img src="images/eng4.jpg" height="250"></a>
+    <a href="images/eng5.jpg" data-lightbox="mygallery"><img src="images/eng5.jpg" height="250"></a>
+    <a href="images/eng8.jpg" data-lightbox="mygallery"><img src="images/eng8.jpg" height="250"></a>    
+    <a href="images/eng6.jpg" data-lightbox="mygallery"><img src="images/eng6.jpg" height="250"></a>
+    <a href="images/eng2.jpg" data-lightbox="mygallery"><img src="images/eng2.jpg" height="250"></a>    
+  </div>
+   <div class="gallery" data-content="5">
+    <a href="images/grad6.jpg" data-lightbox="mygallery"><img src="images/grad6.jpg" height="350"></a>
+    <a href="images/grad3.jpg" data-lightbox="mygallery"><img src="images/grad3.jpg" height="350"></a>
+    <a href="images/grad4.jpg" data-lightbox="mygallery"><img src="images/grad4.jpg" height="350"></a>
+    <a href="images/grad5.jpg" data-lightbox="mygallery"><img src="images/grad5.jpg" height="350"></a>
+    <a href="images/grad1.jpg" data-lightbox="mygallery"><img src="images/grad1.jpg" height="350"></a>
+    <a href="images/grad2.jpg" data-lightbox="mygallery"><img src="images/grad2.jpg" height="350"></a>
+    </div>
+   <div class="gallery" data-content="6">
+    <a href="/images/dhol1.jpg" data-lightbox="mygallery"><img src="/images/dhol1.jpg" height="245"></a>
+    <a href="/images/dhol2.jpg" data-lightbox="mygallery"><img src="/images/dhol2.jpg" height="245"></a>
+    <a href="/images/dhol3.jpg" data-lightbox="mygallery"><img src="/images/dhol3.jpg" height="245"></a>
+    <a href="/images/dhol4.jpg" data-lightbox="mygallery"><img src="/images/dhol4.jpg" height="245"></a>
+    <a href="/images/dhol6.jpg" data-lightbox="mygallery"><img src="/images/dhol6.jpg" height="245"></a>
+    <a href="/images/dhol7.jpg" data-lightbox="mygallery"><img src="/images/dhol7.jpg" height="245"></a>
+    <a href="/images/pillow2.jpg" data-lightbox="mygallery"><img src="/images/pillow2.jpg" height="245"></a>
+    <a href="/images/pillow1.jpg" data-lightbox="mygallery"><img src="/images/pillow1.jpg" height="245"></a>
+    <a href="/images/pillow3.jpg" data-lightbox="mygallery"><img src="/images/pillow3.jpg" height="245"></a>
+    <a href="/images/pillow4.jpg" data-lightbox="mygallery"><img src="/images/pillow4.jpg" height="245"></a>
+    <a href="/images/pillow5.jpg" data-lightbox="mygallery"><img src="/images/pillow5.jpg" height="245"></a>
+    <a href="/images/pillow6.jpg" data-lightbox="mygallery"><img src="/images/pillow6.jpg" height="245"></a>
+    <a href="/images/doublePillow.jpg" data-lightbox="mygallery"><img src="/images/doublePillow.jpg" height="245"></a>  
+    <a href="/images/palkicake.jpg" data-lightbox="mygallery"><img src="/images/palkicake.jpg" height="245"></a> 
+    <a href="/images/mehndi1.jpg" data-lightbox="mygallery"><img src="/images/mehndi1.jpg" height="245"></a>    
+    <a href="/images/mehndi2.jpg" data-lightbox="mygallery"><img src="/images/mehndi2.jpg" height="245"></a>
+    <a href="/images/mehndi3.jpg" data-lightbox="mygallery"><img src="/images/mehndi3.jpg" height="245"></a>
+    <a href="/images/mehndi7.jpg" data-lightbox="mygallery"><img src="/images/mehndi7.jpg" height="245"></a>
+    <a href="/images/mehndi6.jpg" data-lightbox="mygallery"><img src="/images/mehndi6.jpg" height="245"></a>
+    <a href="/images/mehndi5.jpg" data-lightbox="mygallery"><img src="/images/mehndi5.jpg" height="245"></a>
+    <a href="/images/mehndi4.jpg" data-lightbox="mygallery"><img src="/images/mehndi4.jpg" height="245"></a>
+    <a href="/images/mehndi8.jpg" data-lightbox="mygallery"><img src="/images/mehndi8.jpg" height="245"></a>
+    <a href="/images/mehndi9.jpg" data-lightbox="mygallery"><img src="/images/mehndi9.jpg" height="245"></a>    
+   </div>
+  <div  class="gallery" data-content="7">
+    <a href="images/ann2.jpg" data-lightbox="mygallery" data-title="1st Anniversary"><img src="images/ann2.jpg" height="300"></a>
+    <a href="images/ann1.jpg" data-lightbox="mygallery" data-title="4th Anniversary"><img src="images/ann1.jpg" height="300"></a>
+    <a href="images/ann3.jpg" data-lightbox="mygallery" data-title="30th Anniversary"><img src="images/ann3.jpg" height="300"></a>
+    <a href="images/ann4.jpg" data-lightbox="mygallery" data-title="15th Anniversary"><img src="images/ann4.jpg" height="300"></a>
+    <a href="images/hajjParty.jpg" data-lightbox="mygallery" data-title="Welcome Back From Hajj Party"><img src="images/hajjParty.jpg" height="300"></a>
+    <a href="images/akikah1.jpg" data-lightbox="mygallery" data-title="Baby's Naming Ceremony"><img src="images/akikah1.jpg" height="300"></a>
+    <a href="images/akikah2.jpg" data-lightbox="mygallery" data-title="Baby's Naming Ceremony"><img src="images/akikah2.jpg" height="300"></a>
+    <a href="images/akikah3.jpg" data-lightbox="mygallery" data-title="Baby's Naming Ceremony"><img src="images/akikah3.jpg" height="300"></a>
+    <a href="images/valentine1.jpg" data-lightbox="mygallery" data-title="Valentine's Day Special"><img src="images/valentine1.jpg" height="300"></a>
+    <a href="images/valentine2.jpg" data-lightbox="mygallery" data-title="Valentine's Day Special"><img src="images/valentine2.jpg" height="300"></a>
+    <a href="images/sangeet.jpg" data-lightbox="mygallery" data-title="Sangeet Ceremony"><img src="images/sangeet.jpg" height="300"></a>
+    <a href="images/4thJuly.jpg" data-lightbox="mygallery" data-title="4th of July"><img src="images/4thJuly.jpg" height="300"></a>
+    <a href="images/parisThemed.jpg" data-lightbox="mygallery" data-title="Paris Themed Party"><img src="images/parisThemed.jpg" height="300"></a>
+    <a href="images/houseWarming2.jpg" data-lightbox="mygallery" data-title="House Warming Party"><img src="images/houseWarming2.jpg" height="300"></a>
+    <a href="images/houseWarmingParty.jpg" data-lightbox="mygallery" data-title="House Warming Party"><img src="images/houseWarmingParty.jpg" height="300"></a>
+    <a href="images/mothersDay.jpg" data-lightbox="mygallery" data-title="Mother's Day"><img src="images/mothersDay.jpg" height="300"></a>
+    <a href="images/corporateEvent.jpg" data-lightbox="mygallery" data-title="Corporate Event"><img src="images/corporateEvent.jpg" height="300"></a>
+    <a href="images/partyCake.jpg" data-lightbox="mygallery" data-title="Party Cake"><img src="images/partyCake.jpg" height="300"></a>
+    <a href="images/partyCake2.jpg" data-lightbox="mygallery" data-title="Party Cake"><img src="images/partyCake2.jpg" height="300"></a>
+    <a href="images/eidSpecial2.jpg" data-lightbox="mygallery" data-title="Eid Special"><img src="images/eidSpecial2.jpg" height="300"></a>
+    <a href="images/Special1.jpg" data-lightbox="mygallery" data-title="Party Cake"><img src="images/Special1.jpg" height="300"></a>
+    <a href="images/special2.jpg" data-lightbox="mygallery" data-title="Party Cake"><img src="images/special2.jpg" height="300"></a>
+    <a href="images/special3.jpg" data-lightbox="mygallery" data-title="Party Cake"><img src="images/special3.jpg" height="300"></a>
+    <a href="images/halaqa.jpg" data-lightbox="mygallery" data-title="Halaqa Special"><img src="images/halaqa.jpg" height="300"></a>
+    <a href="images/eidSpecial.jpg" data-lightbox="mygallery" data-title="Eid Special"><img src="images/eidSpecial.jpg" height="300"></a>
+    <a href="images/partyCake3.jpg" data-lightbox="mygallery" data-title="Party Cake"><img src="images/partyCake3.jpg" height="300"></a>    
+    </div>
+  <div data-content="8" class="gallery">
+      <a href="/images/wedding18.jpg" data-lightbox="mygallery"><img src="/images/wedding18.jpg" height="300"></a>
+      <a href="/images/wedding2.jpg" data-lightbox="mygallery"><img src="/images/wedding2.jpg" height="300"></a>
+      <a href="/images/wedding5.jpg" data-lightbox="mygallery"><img src="/images/wedding5.jpg" height="300"></a>
+      <a href="/images/wedding6.jpg" data-lightbox="mygallery"><img src="/images/wedding6.jpg" height="300"></a>
+      <a href="/images/wedding3.jpg" data-lightbox="mygallery"><img src="/images/wedding3.jpg" height="300"></a>
+      <a href="/images/wedding4.jpg" data-lightbox="mygallery"><img src="/images/wedding4.jpg" height="300"></a>
+      <a href="/images/wedding8.jpg" data-lightbox="mygallery"><img src="/images/wedding8.jpg" height="300"> </a>
+      <a href="/images/wedding7.jpg" data-lightbox="mygallery"><img src="/images/wedding7.jpg" height="300"></a>
+      <a href="/images/wedding9.jpg" data-lightbox="mygallery"><img src="/images/wedding9.jpg" height="300"></a>
+      <a href="/images/wedding10.jpg" data-lightbox="mygallery"><img src="/images/wedding10.jpg" height="300"></a>
+      <a href="/images/wedding11.jpg" data-lightbox="mygallery"><img src="/images/wedding11.jpg" height="300"></a>
+      <a href="/images/wedding12.jpg" data-lightbox="mygallery"><img src="/images/wedding12.jpg" height="300"></a>
+      <a href="/images/wedding13.jpg" data-lightbox="mygallery"><img src="/images/wedding13.jpg" height="300"></a>
+      <a href="/images/wedding14.jpg" data-lightbox="mygallery"><img src="/images/wedding14.jpg" height="300"></a>
+      <a href="/images/wedding15.jpg" data-lightbox="mygallery"><img src="/images/wedding15.jpg" height="300"></a>
+      <a href="/images/wedding16.jpg" data-lightbox="mygallery"><img src="/images/wedding16.jpg" height="300"></a>    
+      <a href="/images/wedding17.jpg" data-lightbox="mygallery"><img src="/images/wedding17.jpg" height="300"></a>
+      <a href="/images/wedding1.jpg" data-lightbox="mygallery"><img src="/images/wedding1.jpg" height="300"></a>
+      <a href="/images/wedding19.jpg" data-lightbox="mygallery"><img src="/images/wedding19.jpg" height="300"></a>
+      <a href="/images/wedding20.jpg" data-lightbox="mygallery"><img src="/images/wedding20.jpg" height="300"></a>
+      <a href="/images/wedding21.jpg" data-lightbox="mygallery"><img src="/images/wedding21.jpg" height="300"></a>
+      </div>
+  </section>
+  <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="/main">Home</a></li>
+      <li><a href="/cake">Cakes</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+<script type="text/javascript">
+  $(document).ready(function() {
+  $('#tabs li').on('click', function() {
+    var tab = $(this).data('tab');
+
+    $('#tabs li').removeClass('is-active');
+    $(this).addClass('is-active');
+
+    $('#tab-content div').removeClass('is-active');
+    $('div[data-content="' + tab + '"]').addClass('is-active');
+  });
+});
+</script>
+</html>
