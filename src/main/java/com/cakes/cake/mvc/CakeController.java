@@ -44,13 +44,45 @@ public class CakeController {
             borders.put("White", "white");
             model.put("borders", borders);
 
+            Map<String, String> flavors = new HashMap<String, String>();
+			flavors.put("Vanilla", "vanilla");
+            flavors.put("White", "white");
+            flavors.put("Color dyed", "dyed");
+            flavors.put("Chocolate", "chocolate");
+            flavors.put("Marble", "marble");
+            flavors.put("Red Velvet", "red velvet");
+            flavors.put("Strawberry", "strawberry");
+            flavors.put("Coffee (special)", "coffee");
+            flavors.put("Mocha Chiffon (special)S", "mocha chiffon");
+            model.put("flavors", flavors);
+
+            Map<String, String> fillings = new HashMap<String, String>();
+			fillings.put("Whipped Cream", "whipped cream");
+            fillings.put("Fruits with Whipped Cream", "fruits");
+            fillings.put("Fruit Jam", "jam");
+            fillings.put("American Buttercream", "american buttercream");
+            fillings.put("Banana Cream", "banana cream");
+            fillings.put("Creamcheese Frosting", "creamcheese frosting");
+            fillings.put("Chocolate Mousse (special)", "chocolate mousse");
+            fillings.put("White Cholocate Mousse (special)", "white chocolate mousse");
+            fillings.put("Strawberry Mousse (special)", "strawberry mousse");
+            fillings.put("Mocha Mousse (special)", "mocha mousse");
+            fillings.put("Creamcheese Mousse (special)", "creamcheese mousse");
+            fillings.put("Lemon Curd (special)", "lemon curd");
+            fillings.put("Chocoalte Ganache (special)", "chocolate ganache");
+            fillings.put("Swiss Merengue Buttercream (special)", "swiss merengue buttercream");
+            fillings.put("Italian Merengue buttercream (special)", "italian merengue buttercream");
+            model.put("fillings", fillings);
+
             Map<String, String> colors = new HashMap<String, String>();
 			colors.put("Mint", "mint");
             colors.put("Orange", "orange");
             colors.put("Pink", "pink");
             colors.put("Red Velvet", "red velvet");
-            colors.put("White", "white");
+            colors.put("White", "White");
+            
             model.put("colors", colors);
+
 
 		} catch (Exception e) {
 			e.printStackTrace();
