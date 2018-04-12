@@ -8,6 +8,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox-plus-jquery.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 </head>
 <style>
   #tab-content div {
@@ -30,12 +31,43 @@
     transform: scale(1.1);
 }
 
+.hero-body {
+  background-image: url(https://images.pexels.com/photos/230743/pexels-photo-230743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-foot {
+ background-image: url(https://images.pexels.com/photos/230743/pexels-photo-230743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  height: 5%;
+  background-position: 50% 29% ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.title{
+font-family: 'Sofia';font-size: 42px;
+ letter-spacing: 5.5px;
+ text-align: center;
+  font-weight: bold;
+   margin-right: 100px;
+}
+
+.container1{
+  margin-left: 440px;
+   font-weight: bold;
+}
+
 </style>
 <body>
   <section class="hero is-medium is-info">
  
     <div class="hero-foot">
-    <div class="container">
+    <div class="container1">
       <nav class="tabs is-boxed">
         <ul>
            <li>
@@ -57,9 +89,9 @@
   </section>
   <section class="hero is-medium is-info">
     <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          CakesByLucky
+      <div class="container2">
+        <h1 class="title"> 
+        CakesByLucky
         </h1>  
       </div>
     </div>
@@ -108,7 +140,7 @@
     </li>
   </ul>
 </div>
-<section class="container" align="center">
+<section class="container3" align="center">
 <div id="tab-content">
   <div class="gallery is-active" data-content="1">
     <a href="/images/baby1.jpg" data-lightbox="mygallery"><img src="/images/baby1.jpg" height="300"></a>
