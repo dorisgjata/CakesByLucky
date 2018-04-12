@@ -1,16 +1,42 @@
-<!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <title>Main Page</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+  
 </head>
+<style>
+  
+  .hero-foot {
+ background-image: url(https://images.pexels.com/photos/230743/pexels-photo-230743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  height: 5%;
+  background-position: 50% 29% ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.container1{
+  margin-left: 440px;
+  font-weight: bold;
+}
+
+.title{
+font-family: 'Sofia';font-size: 40px;
+ letter-spacing: 5px; 
+  font-weight: bold;
+}
+
+
+  
+</style>
 <body>
- 
+
   <section class="hero is-medium is-info">
     <div class="hero-foot">
-    <div class="container">
+    <div class="container1">
       <nav class="tabs is-boxed">
         <ul>
            <li>
@@ -34,7 +60,8 @@
     <div class="container">
       <h1 class="title">About you.</h1>
       <h2 class="subtitle">
-        Before we start baking we need some info about you.
+      
+       Before we start baking we need some info about you.
       </h2>
       <form th:action=@{/contact} th:object="${email}" method="post">
         <div class="field">
