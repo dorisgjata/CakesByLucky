@@ -61,25 +61,30 @@ font-family: 'Sofia';font-size: 40px;
       <h1 class="title">About you.</h1>
       
       <form th:action=@{/dropdown} >
-        <select >
+        <select>
+            <option disabled="disabled" selected value=" ">Pick a Shape</option>
             <option th:each="shape : ${shapes}"
                 th:value="${shape.value}" th:text="${shape.key}" />
         </select>
-        <select >
+        <select>
+            <option disabled="disabled" selected value=" ">Pick a Shape</option>
             <option th:each="tier : ${tiers}"
                 th:value="${tier.value}" th:text="${tier.key}" />
         </select>
         <select >
+            <option disabled="disabled" selected value=" ">Pick a Drip</option>
             <option th:each="drip : ${drips}"
                 th:value="${drip.value}" th:text="${drip.key}" />
         </select>
-        <select >
+        <select>
+            <option disabled="disabled" selected value=" ">Pick a Border</option>
             <option th:each="border : ${borders}"
                 th:value="${border.value}" th:text="${border.key}" />
         </select>
-        <select >
-            <option th:each="border : ${borders}"
-                th:value="${border.value}" th:text="${border.key}" />
+        <select>
+            <option disabled="disabled" selected value=" ">Pick a Color</option>
+            <option th:each="color : ${colors}"
+                th:value="${color.value}" th:text="${color.key}" />
         </select>
       </form>
     </div>

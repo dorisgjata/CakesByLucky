@@ -44,6 +44,14 @@ public class CakeController {
             borders.put("White", "white");
             model.put("borders", borders);
 
+            Map<String, String> colors = new HashMap<String, String>();
+			colors.put("Mint", "mint");
+            colors.put("Orange", "orange");
+            colors.put("Pink", "pink");
+            colors.put("Red Velvet", "red velvet");
+            colors.put("White", "white");
+            model.put("colors", colors);
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
