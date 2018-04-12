@@ -1,4 +1,9 @@
 package com.cakes.cake.mvc;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.cakes.cake.model.Cakes;
+
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,12 +19,35 @@ public class CakeController {
         return "cake";
     }
     
-    @RequestMapping("/contact")
-    public String contact(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
-        model.addAttribute("email", new SimpleMailMessage());
+    @RequestMapping("/dropdown")
+    public String postDropdown(Map<String, Object> model, Cakes cake) {
+		try {
+			Map<String, String> shapes = new HashMap<String, String>();
+			shapes.put("Circular", "circular");
+			shapes.put("Square", "square");
+            model.put("shapes", shapes);
 
-        return "contact";
-    }
+            Map<Integer, String> tiers = new HashMap<Integer, String>();
+			tiers.put(1, "1");
+            tiers.put(2, "2");
+            tiers.put(3, "3");
+            model.put("tiers", tiers);
+            
+            Map<String, String> drips = new HashMap<String, String>();
+			drips.put("Chocolate", "chocolate");
+			drips.put("Creamchese", "creamcheese");
+            model.put("drips", drips);
+
+            Map<String, String> borders = new HashMap<String, String>();
+			borders.put("Rose", "rose");
+            borders.put("Swirl", "swirl");
+            borders.put("White", "white");
+            model.put("borders", borders);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "dropdown";
+	}
 
 }

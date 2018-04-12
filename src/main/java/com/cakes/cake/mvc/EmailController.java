@@ -22,6 +22,13 @@ public class EmailController {
     @Autowired
     private EmailConfiguration config;
 
+    @RequestMapping("/contact")
+    public String contact(String name, Model model) {
+        model.addAttribute("name", name);
+        model.addAttribute("email", new SimpleMailMessage());
+
+        return "contact";
+    }
 	@RequestMapping(value="/contact", method=RequestMethod.POST)
 	public String sendMail(HttpServletRequest request ) {
         
