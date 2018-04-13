@@ -4,6 +4,8 @@
   <title>Main Page</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
 </head>
 <style>
@@ -55,7 +57,7 @@
                 <figure class="image is-4by3" style="position:relative;">
                     <!-- 
                   <div th:if="@{shape.value}==${circular}" th:text="${circular}">
-                    
+                  
                    <img th:src="@{/images/Circular1org.png}" src="../images/Circular1org.png" style="position:absolute; left:0; top:0; z-index:5;" />
                   </div>
                
@@ -89,7 +91,7 @@
 <div class="tile is-child box">
     <form th:action=@{/dropdown} >
     <div class="dropdown-trigger">
-      <select>
+      <select id="shape">
           <option disabled="disabled" selected value=" ">Pick a Shape</option>
           <option th:each="shape : ${shapes}"
               th:value="${shape.value}" th:text="${shape.key}"
@@ -97,7 +99,7 @@
       </select>
       </div>
       <div class="dropdown-trigger">
-          <select>
+          <select id="tier" disabled>
               <option disabled="disabled" selected value=" ">Pick a Tier</option>
               <option th:each="tier : ${tiers}"
                   th:value="${tier.value}" th:text="${tier.key}"
@@ -105,21 +107,21 @@
           </select>
           </div>
       <div class="dropdown-trigger">
-      <select >
+      <select id="drip" disabled>
           <option disabled="disabled" selected value=" ">Pick a Drip</option>
           <option th:each="drip : ${drips}"
               th:value="${drip.value}" th:text="${drip.key}" />
       </select>
       </div>
       <div class="dropdown-trigger">
-      <select>
+      <select id="border" disabled>
           <option disabled="disabled" selected value=" ">Pick a Border</option>
           <option th:each="border : ${borders}"
               th:value="${border.value}" th:text="${border.key}" />
       </select>
       </div>
       <div class="dropdown-trigger">
-      <select>
+      <select id="color" disabled>
           <option disabled="disabled" selected value=" ">Pick a Color</option>
           <option th:each="color : ${colors}"
               th:value="${color.value}" th:text="${color.key}" />
@@ -127,14 +129,14 @@
       </div>
      
       <div class="dropdown-trigger">
-      <select >
+      <select id="filling">
           <option disabled="disabled" selected value=" ">Pick a Filling</option>
         <option th:each="filling : ${fillings}"
             th:value="${filling.value}" th:text="${filling.key}" />
     </select>
     </div>
     <div class="dropdown-trigger">
-    <select >
+    <select id="flavor" >
       <option disabled="disabled" selected value=" ">Pick a Flavor</option>
       <option th:each="flavor : ${flavors}"
           th:value="${flavor.value}" th:text="${flavor.key}" />
@@ -148,10 +150,43 @@
   </section>
 </body>
 <script type="text/javascript">
-function dropDownHandle(){
-var dropDown = document.getElementsByClassName("dropdown");
+$(document).ready(function() {
+$("#shape").click(function(){
+var shapeValue =$("#shape").val(); // The value of the selected option
+console.log(shapeValue);  
+$("#tier").removeAttr("disabled");
 
-}
+var tier = document.getElementById("tier");
+var tierText= $("#tier :selected").text(); // The text content of the selected option
+var tierValue =$("#tier").val(); // The value of the selected option
+console.log(tierText, tierValue); 
+
+var drip = document.getElementById("drip");
+var dripText= $("#drip :selected").text(); // The text content of the selected option
+var dripValue =$("#drip").val(); // The value of the selected option
+console.log(dripText, dripValue); 
+
+var border = document.getElementById("border");
+var borderText= $("#border :selected").text(); // The text content of the selected option
+var borderValue =$("#border").val(); // The value of the selected option
+console.log(borderText, borderValue); 
+
+var color = document.getElementById("color");
+var colorText= $("#color :selected").text(); // The text content of the selected option
+var colorValue =$("#color").val(); // The value of the selected option
+console.log(colorText, colorValue); 
+
+});
+$("#tier").click(function(){  
+$("#drip").removeAttr("disabled");
+});
+$("#drip").click(function(){  
+$("#border").removeAttr("disabled");
+});
+$("#border").click(function(){  
+$("#color").removeAttr("disabled");
+});
+});
  </script>
 
 </html>
