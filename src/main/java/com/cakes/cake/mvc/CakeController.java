@@ -1,90 +1,60 @@
 package com.cakes.cake.mvc;
-import java.util.HashMap;
-import java.util.Map;
-import com.cakes.cake.model.Cakes;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.cakes.cake.config.EmailConfiguration;
 
 @Controller
 public class CakeController {
+	@Autowired
+	private JavaMailSender sender;
+    @Autowired
+    private EmailConfiguration config;
 
-    @RequestMapping("/cake")
-    public String cake(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
-        return "cake";
-    }
-    
     @RequestMapping("/dropdown")
-    public String postDropdown(Map<String, Object> model, Cakes cake) {
-		try {
-			Map<String, String> shapes = new HashMap<String, String>();
-			shapes.put("Circular", "circular");
-			shapes.put("Square", "square");
-            model.put("shapes", shapes);
+    public String dropdown(String name, Model model) {
+        model.addAttribute("name", name);
+        model.addAttribute("email", new SimpleMailMessage());
 
-            Map<Integer, String> tiers = new HashMap<Integer, String>();
-			tiers.put(1, "1");
-            tiers.put(2, "2");
-            tiers.put(3, "3");
-            model.put("tiers", tiers);
-            
-            Map<String, String> drips = new HashMap<String, String>();
-			drips.put("Chocolate", "chocolate");
-			drips.put("Creamchese", "creamcheese");
-            model.put("drips", drips);
+        return "dropdown";
+    }
+	@RequestMapping(value="/dropdown", method=RequestMethod.POST)
+	public String sendMail(HttpServletRequest request ) {
+        
+        String from = request.getParameter("from");
+        String subject = request.getParameter("subject");
+        String shape = request.getParameter("shape");
+        String tier = request.getParameter("tier");
+        String drip = request.getParameter("drip");
+        String border = request.getParameter("border");
+        String filling= request.getParameter("filling");
+        String flavor = request.getParameter("flavor");
+        String color = request.getParameter("color");
 
-            Map<String, String> borders = new HashMap<String, String>();
-			borders.put("Rose", "rose");
-            borders.put("Swirl", "swirl");
-            borders.put("White", "white");
-            model.put("borders", borders);
+String text = ("Shape: "+shape+"\nTier: " +tier+"\nDrip: "+drip+"\nBorder: " +border+"\nFilling: "+filling+"\nFlavor: " +flavor+"\nColor: " +color);
+       
+       SimpleMailMessage email = new SimpleMailMessage();
 
-            Map<String, String> flavors = new HashMap<String, String>();
-			flavors.put("Vanilla", "vanilla");
-            flavors.put("White", "white");
-            flavors.put("Color dyed", "dyed");
-            flavors.put("Chocolate", "chocolate");
-            flavors.put("Marble", "marble");
-            flavors.put("Red Velvet", "red velvet");
-            flavors.put("Strawberry", "strawberry");
-            flavors.put("Coffee (special)", "coffee");
-            flavors.put("Mocha Chiffon (special)S", "mocha chiffon");
-            model.put("flavors", flavors);
-
-            Map<String, String> fillings = new HashMap<String, String>();
-			fillings.put("Whipped Cream", "whipped cream");
-            fillings.put("Fruits with Whipped Cream", "fruits");
-            fillings.put("Fruit Jam", "jam");
-            fillings.put("American Buttercream", "american buttercream");
-            fillings.put("Banana Cream", "banana cream");
-            fillings.put("Creamcheese Frosting", "creamcheese frosting");
-            fillings.put("Chocolate Mousse (special)", "chocolate mousse");
-            fillings.put("White Cholocate Mousse (special)", "white chocolate mousse");
-            fillings.put("Strawberry Mousse (special)", "strawberry mousse");
-            fillings.put("Mocha Mousse (special)", "mocha mousse");
-            fillings.put("Creamcheese Mousse (special)", "creamcheese mousse");
-            fillings.put("Lemon Curd (special)", "lemon curd");
-            fillings.put("Chocoalte Ganache (special)", "chocolate ganache");
-            fillings.put("Swiss Merengue Buttercream (special)", "swiss merengue buttercream");
-            fillings.put("Italian Merengue buttercream (special)", "italian merengue buttercream");
-            model.put("fillings", fillings);
-
-            Map<String, String> colors = new HashMap<String, String>();
-			colors.put("Mint", "mint");
-            colors.put("Orange", "orange");
-            colors.put("Pink", "pink");
-            colors.put("Red Velvet", "red velvet");
-            colors.put("White", "White");
-            
-            model.put("colors", colors);
-
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return "dropdown";
-	}
+        email.setTo("cakesbyluckydemo@gmail.com");
+        email.setFrom(from);
+        email.setSubject(subject);
+        email.setText(text);        
+      
+		sender.send(email);
+		return "redirect:main";
+	
+    }
 
 }
+
