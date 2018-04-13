@@ -23,7 +23,7 @@ public class ChargeController{
     model.addAttribute("id", charge.getId());
     model.addAttribute("status", charge.getStatus());
     model.addAttribute("balance_transaction",charge.getBalanceTransaction());
-    return "results";
+    return "redirect:main";
 }
 @ExceptionHandler(StripeException.class)
     public String handleError(Model model, StripeException ex){

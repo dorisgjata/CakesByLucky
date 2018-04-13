@@ -55,7 +55,7 @@ throws Exception {
                 out.println("<nav class='tabs is-boxed'>");
                 out.println("<ul>");
                 out.println("<li><a href='/main'>Gallery</a></li>");
-                out.println("<li><a href='/cake'>Cake</a></li>");    
+                out.println("<li><a href='/AMainPage'>Cake</a></li>");    
                 out.println("<li><a href='/desserts'>Buy Desserts</a></li>");     
                 out.println("<li><a href='/contact'>Contact</a></li>");     
                 out.println("</ul></nav></div></div></section>");
@@ -75,7 +75,7 @@ throws Exception {
         }
         out.println("<table border='1px'align='center'>");
         out.println("<p align='center'>Total cost = "+"$"+total+"</p>");        
-        out.println("<table align='center'><tr><td><input type='submit'id='customButton' class='button is-info' align='center' value='Checkout'></td></tr></table>");
+        out.println("<table align='center'><tr><td><input  action='/charge'  type='submit'id='customButton' class='button is-info' align='center' value='Checkout'></td></tr></table>");
         out.println("<script>");
         out.println("var handler = StripeCheckout.configure({key: 'pk_test_XiN2djuA00o46n9VUKYMcOo4'});");
         out.println("document.getElementById('customButton').addEventListener('click',function(e){");
