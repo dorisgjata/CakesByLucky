@@ -1,30 +1,42 @@
-<!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <title>Main Page</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+  
 </head>
 <style>
-     select{
-         width:200px;
-         height:30px;
-         font-size:18px;
-         border-radius: 5px;
-         border-color: #dbdbdb;
-         
-        }
-        .dropdown-trigger{
-            padding: 5px;
-        }
+  
+  .hero-foot {
+ background-image: url(https://images.pexels.com/photos/230743/pexels-photo-230743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  height: 5%;
+  background-position: 50% 29% ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.container1{
+  margin-left: 440px;
+  font-weight: bold;
+}
+
+.title{
+font-family: 'Sofia';font-size: 40px;
+ letter-spacing: 5px; 
+  font-weight: bold;
+}
+
+
+  
 </style>
 <body>
- 
+
   <section class="hero is-medium is-info">
- 
     <div class="hero-foot">
-    <div class="container">
+    <div class="container1">
       <nav class="tabs is-boxed">
         <ul>
            <li>
@@ -45,78 +57,108 @@
     </div>
   </section>
   <section class="section">
-  <div class="container">
-      <div class="tile is-ancestor">
-          <div class="tile is-vertical is-8">
-              <div class="tile is-parent is-vertical">
-                <div class="tile is-child box is-info">
-              <p class="title">Costumized Cake</p>
-              <p class="subtitle">by you</p>
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/640x480.png">
-              </figure>
-            </div>
-         </div>
-      </div>
+    <div class="container">
+      <h1 class="title">Customize your own cake</h1>
       
-<div class="tile is-parent">
-<div class="tile is-child box">
-    <form th:action=@{/dropdown} >
-    <div class="dropdown-trigger">
-      <select>
-          <option disabled="disabled" selected value=" ">Pick a Shape</option>
-          <option th:each="shape : ${shapes}"
-              th:value="${shape.value}" th:text="${shape.key}" />
+      <form th:action=@{/dropdown} th:object="${email}" method="post" >
+       
+
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input class="input" type="email" th:field="*{from}" th:placeholder="Email">
+  
+            </div>
+          </div>     
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input class="input" type="subject" name="subject" th:field="*{subject}" th:placeholder="Name">
+            </div>
+          </div>
+          
+
+
+
+        <select name="shape">
+            <option disabled="disabled" selected value=" ">Pick a shape</option>
+            <option value="circle" />Circle</option>
+            <option value="square" />Square</option>
+
+        </select>
+        <select name="tier">
+            <option disabled="disabled" selected value=" ">Pick how many tiers</option>
+            <option value="1" />1</option>
+            <option value="2" />2</option>
+            <option value="3" />3</option>
+
+        </select>
+        <select name="drip" >
+            <option disabled="disabled" selected value=" ">Pick a drip</option>
+           <option value="chocolate" />Chocolate</option>
+           <option value="Creamcheese" />Creamcheese</option>
+
+        </select>
+        <select name="border">
+            <option disabled="disabled" selected value=" ">Pick a Border</option>
+            <option value="rose" />Rose</option>
+            <option value="swirl" />Swirl</option>
+            <option value="white" />White</option>
+
+        </select>
+        <select name="filling">
+            <option disabled="disabled" selected value=" ">Pick a filling</option>
+            <option value="Whipped Cream" />Whipped Cream</option>
+            <option value="Fruits with Whipped Cream" />Fruits with Whipped Cream</option>
+            <option value="Fruit Jam" />Fruit Jam</option>
+            <option value="American Buttercream" />American Buttercream</option>
+            <option value="Banana Cream" />Banana Cream</option>
+            <option value="Creamcheese Frosting" />Creamcheese Frosting</option>
+            <option value="Chocolate Mousse" />Chocolate Mousse (special)</option>
+            <option value="White Cholocate Mousse" />White Cholocate Mousse (special)</option>
+            <option value="Strawberry Mousse" />Strawberry Mousse (special)</option>
+            <option value="Mocha Mousse" />Mocha Mousse (special)</option>
+            <option value="Chocolate Mousse" />Chocolate Mousse (special)</option>
+            <option value="Creamcheese Mousse" />Creamcheese Mousse (special)</option>
+            <option value="Lemon Curd" />Lemon Curd (special)</option>
+            <option value="Chocoalte Ganache" />Chocoalte Ganache (special)</option>
+            <option value="Swiss Merengue Buttercream" />Swiss Merengue Buttercream (special)</option>
+            <option value="Italian Merengue buttercream" />Italian Merengue buttercream (special)</option>
       </select>
-      </div>
-      <div class="dropdown-trigger">
-      <select >
-          <option disabled="disabled" selected value=" ">Pick a Drip</option>
-          <option th:each="drip : ${drips}"
-              th:value="${drip.value}" th:text="${drip.key}" />
-      </select>
-      </div>
-      <div class="dropdown-trigger">
-      <select>
-          <option disabled="disabled" selected value=" ">Pick a Border</option>
-          <option th:each="border : ${borders}"
-              th:value="${border.value}" th:text="${border.key}" />
-      </select>
-      </div>
-      <div class="dropdown-trigger">
-      <select>
-          <option disabled="disabled" selected value=" ">Pick a Color</option>
-          <option th:each="color : ${colors}"
-              th:value="${color.value}" th:text="${color.key}" />
-      </select>
-      </div>
-     
-      <div class="dropdown-trigger">
-      <select >
-          <option disabled="disabled" selected value=" ">Pick a Filling</option>
-        <option th:each="filling : ${fillings}"
-            th:value="${filling.value}" th:text="${filling.key}" />
+      <select name="flavor">
+        <option disabled="disabled" selected value=" ">Pick a flavor</option>
+        <option value="Vanilla" />Vanilla</option>
+        <option value="White" />White</option>
+        <option value="Color Dyed" />Color Dyed</option>
+        <option value="Chocolate" />Chocolate</option>
+        <option value="Marble" />Marble</option>
+        <option value="Red Velvet" />Red Velvet</option>
+        <option value="Strawberry" />Strawberry</option>
+        <option value="Coffee" />Coffee (special)</option>
+        <option value="Mocha Chiffon" />Mocha Chiffon (special)</option>
+
+
     </select>
-    </div>
-    <div class="dropdown-trigger">
-    <select >
-      <option disabled="disabled" selected value=" ">Pick a Flavor</option>
-      <option th:each="flavor : ${flavors}"
-          th:value="${flavor.value}" th:text="${flavor.key}" />
-  </select>
-  </div>
-    </form>
-</div>
-</div>
-  </div>
+        <select name="color">
+          <option disabled="disabled" selected value=" ">Pick a Color</option>
+          <option value="Mint" />Mint</option>
+          <option value="Orange" />Orange</option>
+          <option value="Pink" />Pink</option>
+          <option value="Red Velvet" />Red Velvet</option>
+          <option value="White" />White</option>
+        </select>
+        <input type="submit" value="submit">
+
+        
+      </form>
     </div>
   </section>
+  <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="/main">Home</a></li>
+      <li><a href="/cake">Cakes</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
 </body>
-<script type="text/javascript">
-function dropDownHandle(){
-var dropDown = document.getElementsByClassName("dropdown");
-dropDown.addAtribute("is-active")
-}
- </script>
-
 </html>
