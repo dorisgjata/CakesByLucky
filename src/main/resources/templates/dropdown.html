@@ -52,8 +52,34 @@
                 <div class="tile is-child box is-info">
               <p class="title">Costumized Cake</p>
               <p class="subtitle">by you</p>
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/640x480.png">
+                <figure class="image is-4by3" style="position:relative;">
+                    <!-- 
+                  <div th:if="@{shape.value}==${circular}" th:text="${circular}">
+                    
+                   <img th:src="@{/images/Circular1org.png}" src="../images/Circular1org.png" style="position:absolute; left:0; top:0; z-index:5;" />
+                  </div>
+               
+                   <img th:src="@{/images/Square1org.png}" src="../images/Square1org.png" style="position:absolute; left:0; top:0; z-index:5;" />
+                    
+                 
+                  
+                  <img th:src="@{/images/Circular1org.png}" src="../images/Circular1org.png" style="position:absolute; left:0; top:0; z-index:5;" />
+                  <img th:src="@{/images/Circular2org.png}" src="../images/Circular2rg.png" style="position:absolute; left:0; top:0; z-index:5;" />
+                  <img th:src="@{/images/Circular3org.png}" src="../images/Circular3org.png" style="position:absolute; left:0; top:0; z-index:5;" />
+               
+                  <img th:src="@{/images/Square1org.png}" src="../images/Square1org.png" style="position:absolute; left:0; top:0; z-index:5;" />
+                  <img th:src="@{/images/Square2org.png}" src="../images/Square2org.png" style="position:absolute; left:0; top:0; z-index:5;" />
+                  <img th:src="@{/images/Square3org.png}" src="../images/Square3org.png" style="position:absolute; left:0; top:0; z-index:5;" />
+                    
+
+
+                <img th:src="@{/images/blackDrips-1tier.png}" src="../images/blackDrips-1tier.png" style="position:absolute; left:0; top:0; z-index:10;" /> 
+                <img th:src="@{/images/blackDrips-1tier.png}" src="../images/blackDrips-1tier.png" style="position:absolute; left:0; top:0; z-index:10;" /> 
+                <img th:src="@{/images/blackDrips-1tier.png}" src="../images/blackDrips-1tier.png" style="position:absolute; left:0; top:0; z-index:10;" /> 
+
+                
+                <img th:src="@{/images/swirl-1round.png}" src="../images/swirl-1round.png" style="position:absolute; left:0; top:0; z-index:6;" /> 
+                 <-->
               </figure>
             </div>
          </div>
@@ -66,9 +92,18 @@
       <select>
           <option disabled="disabled" selected value=" ">Pick a Shape</option>
           <option th:each="shape : ${shapes}"
-              th:value="${shape.value}" th:text="${shape.key}" />
+              th:value="${shape.value}" th:text="${shape.key}"
+              />
       </select>
       </div>
+      <div class="dropdown-trigger">
+          <select>
+              <option disabled="disabled" selected value=" ">Pick a Tier</option>
+              <option th:each="tier : ${tiers}"
+                  th:value="${tier.value}" th:text="${tier.key}"
+                  />
+          </select>
+          </div>
       <div class="dropdown-trigger">
       <select >
           <option disabled="disabled" selected value=" ">Pick a Drip</option>
@@ -115,7 +150,7 @@
 <script type="text/javascript">
 function dropDownHandle(){
 var dropDown = document.getElementsByClassName("dropdown");
-dropDown.addAtribute("is-active")
+
 }
  </script>
 

@@ -5,6 +5,7 @@ import com.cakes.cake.model.Cakes;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -85,6 +86,13 @@ public class CakeController {
 			e.printStackTrace();
 		}
 		return "dropdown";
-	}
+    }
+    @RequestMapping(value="/dropdown",  method=RequestMethod.POST)
+    public String getCake(){
+        return "dropdown";
+    }
+
+
+
 
 }
