@@ -1,10 +1,7 @@
 package com.cakes.cake.mvc;
 import java.util.HashMap;
 import java.util.Map;
-
 import com.cakes.cake.model.Cakes;
-
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

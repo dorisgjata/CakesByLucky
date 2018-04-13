@@ -70,13 +70,6 @@
       </select>
       </div>
       <div class="dropdown-trigger">
-      <select>
-          <option disabled="disabled" selected value=" ">Pick a Shape</option>
-          <option th:each="tier : ${tiers}"
-              th:value="${tier.value}" th:text="${tier.key}" />
-      </select>
-      </div>
-      <div class="dropdown-trigger">
       <select >
           <option disabled="disabled" selected value=" ">Pick a Drip</option>
           <option th:each="drip : ${drips}"
@@ -97,33 +90,21 @@
               th:value="${color.value}" th:text="${color.key}" />
       </select>
       </div>
+     
       <div class="dropdown-trigger">
       <select >
-          <option disabled="disabled" selected value=" ">Pick a Border</option>
-          <option th:each="border : ${borders}"
-              th:value="${border.value}" th:text="${border.key}" />
-      </select>
-      </div>
-      <div class="dropdown-trigger">
-      <select >
-          <option disabled="disabled" selected value=" ">Pick a filling</option>
+          <option disabled="disabled" selected value=" ">Pick a Filling</option>
         <option th:each="filling : ${fillings}"
             th:value="${filling.value}" th:text="${filling.key}" />
     </select>
     </div>
     <div class="dropdown-trigger">
     <select >
-      <option disabled="disabled" selected value=" ">Pick a flavor</option>
+      <option disabled="disabled" selected value=" ">Pick a Flavor</option>
       <option th:each="flavor : ${flavors}"
           th:value="${flavor.value}" th:text="${flavor.key}" />
   </select>
   </div>
-  <div class="dropdown-trigger">
-      <select>
-        <option disabled="disabled" selected value=" ">Pick a Color</option>
-        <option th:each="color: ${colors}" th:value="${color.value}" th:text="${color.key}" />
-      </select>
-      </div>
     </form>
 </div>
 </div>
