@@ -45,6 +45,19 @@ out.println("<script src='https://checkout.stripe.com/checkout.js'></script>");
 
 out.println("<title>result</title>"); 
 out.println("</head>");
+
+out.println("<style>");
+  
+out.println(".hero-foot { background-image: url(https://images.pexels.com/photos/230743/pexels-photo-230743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); height: 5%; background-position: 50% 29% ; background-repeat: no-repeat; background-size: cover; position: relative;}");
+
+out.println(".container1{margin-left: 440px; font-weight: bold;}");
+
+out.println(".title{font-family: 'Sofia';font-size: 40px; letter-spacing: 5px;  font-weight: bold;}");
+
+
+  
+out.println("</style>");
+
 out.println("<body>");
 out.println("<section class='hero is-medium is-info'>");
 out.println("<div class='hero-foot'>");
