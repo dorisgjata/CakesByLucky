@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Main Page</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script language="javascript" type="text/javascript">
+
+	function display_alert()
+  {
+  alert("Please pick a shape first:)")
+  }
+	
+</script>
+
+</head>
+<body>
+  <nav class="navbar is-primary is-info" role="navigation" aria-label="main navigation">
+    <div class="navbar-start">
+      <a class="navbar-item" href="/main">
+        CakesByLucky
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Menu
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">Cakes</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <section class="section">
+  <div class="container">
+      <div class="tile is-ancestor">
+          <div class="tile is-vertical is-8">
+              <div class="tile is-parent is-vertical">
+                <div class="tile is-child box is-info">
+              <p class="title">Costumized Cake</p>
+              <p class="subtitle">by you</p>
+              <figure class="image is-4by3" style="position:relative;">
+                <img src="images/qm.jpg" style="position:absolute; left:0; top:0; z-index:1;" />
+              </figure>
+            </div>
+         
+
+          <div class="tile is-child box">
+            <p class="title"> Cost</p>
+            <p class="subtitle">$20</p>
+          
+          </div>
+        </div>
+      </div>
+<div path="/costumize" class="tile is-parent">
+<div class="tile is-child box">
+ <div class="tile is-4 is-vertical is-parent">
+<div class="tile is-child ">
+	<span style="font-size:25px;color:dimgrey;font-weight:500;">Now pick up some flavours ;)</span>
+<div class="dropdown has-dropdown">
+    <div class="dropdown-trigger"><br>
+		<span style="font-size:20px;color:dimgrey;font-weight:500;">Flavours</span>
+<select size="1" name="Flavours"  class="form-control"  style = "width:200px;height:30px;font-size:18px;" > 
+<option>Select One</option>
+<option>Vanilla</option>	
+<option>Chocolate</option>
+<option>Strawberry</option>
+<option>Coffee</option>
+<option disabled>---------Featured--------</option>
+<option>Mocha</option>
+<option>Coconut</option>
+</select>
+  </div></div><br><br>
+	
+<span style="font-size:20px;color:dimgrey;font-weight:500;">Icing</span>
+<div class="tile is-child ">          
+    <div class="dropdown is-active">
+      <div class="dropdown-trigger">
+      <select size="1" name="Icing" class="form-control"  style = "width:200px;height:30px;font-size:18px;">
+		  <option>Select One</option>
+<option>Butter cream</option>	
+<option>Whipped</option>
+
+</select>  
+      </div></div></div><br>
+
+<span style="font-size:20px;color:dimgrey;font-weight:500;">Fillings</span>  
+<div class="tile is-child">          
+    <div class="dropdown">
+          <div class="dropdown-trigger">
+            <select size="1" name="Fillings" class="form-control"  style = "width:200px;height:30px;font-size:18px;">
+				<option>Select One</option>
+<option>Whipped cream</option>	
+<option>Fruits with whipped cream</option>
+<option>Fruit jams</option>
+<option>American butter cream</option>
+<option>Banana cream</option>
+<option>Cream cheese frosting</option>
+<option disabled>---------Featured--------</option>
+<option>Chocolate mousse</option>
+<option>White chocolate mousse</option>
+<option>Strawberry mousse</option>
+<option>Mocha</option>
+<option>Lemon</option>
+</select>
+          </div> </div></div><br><br>
+	
+	<a href="">
+    <button>Submit</button>
+</a>
+
+	
+	
+	
+</div>
+          </div>
+        </div>
+      </div>      
+    </div>
+    
+  </div>
+    
+  </section>
+  <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="/main">Home</a></li>
+      <li><a href="/cake">Cakes</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+<script type="text/javascript">
+function dropDownHandle(){
+var dropDown = document.getElementsByClassName("dropdown");
+dropDown.addAtribute("is-active")
+}
+
+ </script>
+
+</html>

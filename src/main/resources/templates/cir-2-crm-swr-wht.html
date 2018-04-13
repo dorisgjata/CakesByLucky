@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Main Page</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script language="javascript" type="text/javascript">
+
+	
+</script>
+
+</head>
+<body>
+  <nav class="navbar is-primary is-info" role="navigation" aria-label="main navigation">
+    <div class="navbar-start">
+      <a class="navbar-item" href="/main">
+        CakesByLucky
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Menu
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">Cakes</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <section class="section">
+  <div class="container">
+      <div class="tile is-ancestor">
+          <div class="tile is-vertical is-8">
+              <div class="tile is-parent is-vertical">
+                <div class="tile is-child box is-info">
+              <p class="title">Costumized Cake</p>
+              <p class="subtitle">by you</p>
+              <figure class="image is-4by3" style="position:relative;">
+                <img src="images/white1tiercake.png" style="position:absolute; left:0; top:0; z-index:5;" />
+			<img src="images/white2tiercake.png" style="position:absolute; left:0; top:0; z-index:10;" />
+				<img src="images/creamchsDrips-2tier.png" style="position:absolute; left:0; top:0; z-index:15;" />
+				  <img src="images/swirl-2round.png" style="position:absolute; left:0; top:0; z-index:11;" />
+				  
+              </figure>
+            </div>
+         
+
+          <div class="tile is-child box">
+            <p class="title"> Cost</p>
+            <p class="subtitle">$20</p>
+          
+          </div>
+        </div>
+      </div>
+<div path="/costumize" class="tile is-parent">
+<div class="tile is-child box">
+ <div class="tile is-4 is-vertical is-parent">
+<div class="tile is-child ">          
+<div class="dropdown has-dropdown">
+    <div class="dropdown-trigger">
+<select size="1" name="Shapes"  class="form-control"  style = "width:200px;height:30px;font-size:18px;" onChange="window.location=this.value;" > 
+<option value="1">Pick up a shape :)</option>
+<option value="cir.html">Circular</option>	
+<option value="sqr.html">Square</option>
+</select>
+  </div></div><br><br>
+
+<div class="tile is-child ">          
+    <div class="dropdown is-active">
+      <div class="dropdown-trigger">
+      <select size="1" name="Tires" class="form-control"  style = "width:200px;height:30px;font-size:18px;" onChange="window.location=this.value;"> 
+<option value="4">How many tires :)</option>	
+<option value="cir-1.html">1</option>
+<option value="cir-2.html">2</option>
+<option value="cir-3.html">3</option>
+</select>  
+      </div></div></div><br>
+
+   
+<div class="tile is-child">          
+    <div class="dropdown">
+          <div class="dropdown-trigger">
+            <select size="1" name="Drips" class="form-control"  style = "width:200px;height:30px;font-size:18px;" onChange="window.location=this.value;"> 
+<option value="18">Pick up a drip :)</option>
+<option value="cir-2-cho.html">Chocolate</option>	
+<option value="cir-2-crm.html">Creamcheese</option>
+</select>
+          </div> </div></div><br>
+
+	<div class="tile is-child">          
+    <div class="dropdown">
+          <div class="dropdown-trigger">
+            <select size="1" name="Borders" class="form-control"  style = "width:200px;height:30px;font-size:18px;" onChange="window.location=this.value;"> 
+<option value="14">Pick up a border :)</option>
+<option value="cir-2-crm-ros.html">Rose</option>	
+<option value="cir-2-crm-swr.html">Swril</option>
+<option value="cir-2-crm-wht.html">White</option>
+</select> 
+          </div></div> </div><br>
+	
+	 <div class="tile is-child ">          
+        <div class="dropdown">
+        <div class="dropdown-trigger">
+          <select size="1" name="Color" class="form-control"  style = "width:200px;height:30px;font-size:18px;" onChange="window.location=this.value;"> 
+<option value="8">Pick up a color :)</option>
+<option value="cir-2-crm-swr-mnt.html">Mint</option>	
+<option value="cir-2-crm-swr-org.html">Orange</option>
+<option value="cir-2-crm-swr-pnk.html">Pink</option>
+<option value="cir-2-crm-swr-red.html">Red Velvet</option>
+<option value="cir-2-crm-swr-wht.html">White</option>
+</select> 
+        </div></div></div><br>
+	
+	<a href="OtherFlav.html">
+    <button>Next</button>
+</a>
+	
+	
+</div>
+          </div>
+        </div>
+      </div>      
+    </div>
+    
+  </div>
+    
+  </section>
+  <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="/main">Home</a></li>
+      <li><a href="/cake">Cakes</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+<script type="text/javascript">
+function dropDownHandle(){
+var dropDown = document.getElementsByClassName("dropdown");
+dropDown.addAtribute("is-active")
+}
+
+ </script>
+
+</html>
